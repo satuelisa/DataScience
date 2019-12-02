@@ -1,6 +1,6 @@
 echo INI
-grep SIN_DESCR signif_ini.txt | awk -F ',' '{print $1" "$4}' | sort | uniq -c
+grep tipoE signif_ini.txt | grep -v SIN_DESCR | awk -F ',' '{print $1}'
 echo MCU
-grep SIN_DESCR signif_mcu.txt | awk -F ',' '{print $1" "$4}' | sort | uniq -c
+grep tipoE signif_mcu.txt | grep -v SIN_DESCR | awk -F ',' '{print $1}'
 echo ORD
-grep SIN_DESCR signif_ord.txt | awk -F ',' '{print $1" "$4}' | sort | uniq -c
+grep tipoE signif_ord.txt | grep -v SIN_DESCR | awk -F ',' '{print $1}'
