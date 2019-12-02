@@ -22,4 +22,9 @@ grep -v "^$" tmp > tmp2 # quitar líneas en blanco
 # sustituir campos vacios                                                                                                                                                                                                    
 sed 's/,,/,NA1ra,/g' tmp2 | sed 's/^,/SIN_DESCR,/g' | sed 's/,$/,NA2da/g' > signif_ord.txt
 
+echo "INI"
 head -n 10 signif_ini.txt
+echo "MCU"
+head -n 10 signif_mcu.txt 
+echo "ORD"
+head -n 10 signif_ord.txt 
